@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from \"@contentlayer/source-files\";\n\nexport const Plan = defineDocumentType(() => ({\n\tname: \"Plan\",\n\tfilePathPattern: \"plans/**/*.mdx\",\n\tcontentType: \"mdx\",\n\tfields: {\n\t\ttitle: {\n\t\t\ttype: \"string\",\n\t\t\trequired: true\n\t\t},\n\t\tdescription: {\n\t\t\ttype: \"string\"\n\t\t},\n\t\tpathSlug: {\n\t\t\ttype: \"string\",\n\t\t\trequired: true\n\t\t}\n\t},\n\tcomputedFields: {\n\t\turl: {\n\t\t\ttype: \"string\",\n\t\t\tresolve: (plan) => `/plans/${plan._raw.flattenedPath}`\n\t\t}\n\t}\n}));\n\nexport default makeSource({\n\tcontentDirPath: \"./content\",\n\tdocumentTypes: [Plan]\n});\n"],
+  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAExC,IAAM,OAAO,mBAAmB,OAAO;AAAA,EAC7C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACP,OAAO;AAAA,MACN,MAAM;AAAA,MACN,UAAU;AAAA,IACX;AAAA,IACA,aAAa;AAAA,MACZ,MAAM;AAAA,IACP;AAAA,IACA,UAAU;AAAA,MACT,MAAM;AAAA,MACN,UAAU;AAAA,IACX;AAAA,EACD;AAAA,EACA,gBAAgB;AAAA,IACf,KAAK;AAAA,MACJ,MAAM;AAAA,MACN,SAAS,CAAC,SAAS,UAAU,KAAK,KAAK;AAAA,IACxC;AAAA,EACD;AACD,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACzB,gBAAgB;AAAA,EAChB,eAAe,CAAC,IAAI;AACrB,CAAC;",
+  "names": []
+}
