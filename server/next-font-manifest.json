@@ -1,0 +1,13 @@
+{
+  "pages": {},
+  "app": {
+    "/Users/jayprajapati/Developer/websites/tennesse/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": [
+      "static/media/2aaf0723e720e8b9-s.p.woff2"
+    ],
+    "/Users/jayprajapati/Developer/websites/tennesse/node_modules/next/font/google/target.css?{\"path\":\"components/menubar/menubar.tsx\",\"import\":\"Permanent_Marker\",\"arguments\":[{\"subsets\":[\"latin\"],\"weight\":\"400\"}],\"variableName\":\"permanent_marker\"}": [
+      "static/media/09f7b6b7f4b56175-s.p.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}
