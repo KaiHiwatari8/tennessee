@@ -1,6 +1,7 @@
-import {useMDXComponent} from "next-contentlayer/hooks";
 import {notFound} from "next/navigation";
-import {allPlans, Plan as PlanType} from "contentlayer/generated";
+import {allPlans} from "contentlayer/generated";
+import {Mdx} from "@tn/components/mdx-component";
+import Image from "next/image";
 
 interface PlanPageProps {
 	params: {
@@ -21,7 +22,7 @@ export async function generateStaticParams(): Promise<PlanPageProps["params"][]>
 		path: val.pathSlug,
 		index: idx
 	}));
-};
+}
 
 export default async function Plan({params}: PlanPageProps) {
 	const plan = await getPlanFromUrl(params);
@@ -29,11 +30,23 @@ export default async function Plan({params}: PlanPageProps) {
 		notFound();
 	}
 
-	const MdxContent = useMDXComponent(plan.body.code);
 	return (
-		<p>
-			<div dangerouslySetInnerHTML={{__html:plan.body.raw}}>
-			</div>
-		</p>
+		<article className="plan_wrapper container lg:px-40 px-3 mx-auto py-5">
+			<header className="plan_title text-gray-100">
+				<p className="text-3xl lg:text-6xl font-semibold">Day {plan.day} - {plan.title}</p>
+				<p className="text-xs text-gray-400 pt-2">Date planned: {plan.datePlanned}</p>
+				<p className="text-xs text-gray-400">Date last updated: {plan.dateUpdated}</p>
+			</header>
+			{plan.image && (
+				<Image
+					src={plan.image}
+					width="1000"
+					height="900"
+					alt="Smokey Mountains"
+					className="mx-auto rounded-3xl py-4"
+				/>
+			)}
+			<Mdx code={plan.body.code}/>
+		</article>
 	);
 }

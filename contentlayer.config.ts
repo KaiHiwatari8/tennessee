@@ -9,8 +9,24 @@ export const Plan = defineDocumentType(() => ({
 			type: "string",
 			required: true
 		},
+		day: {
+			type: "number",
+			required: true
+		},
 		description: {
 			type: "string"
+		},
+		image: {
+			type: "string",
+			required: true,
+		},
+		dateUpdated: {
+			type: "string",
+			required: true
+		},
+		datePlanned: {
+			type: "string",
+			required: true
 		},
 		pathSlug: {
 			type: "string",
@@ -20,7 +36,7 @@ export const Plan = defineDocumentType(() => ({
 	computedFields: {
 		url: {
 			type: "string",
-			resolve: (plan) => `/plans/${plan._raw.flattenedPath}`
+			resolve: (plan) => `/${plan._raw.flattenedPath}`
 		}
 	}
 }));

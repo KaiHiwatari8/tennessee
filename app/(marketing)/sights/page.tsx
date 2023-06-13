@@ -1,7 +1,7 @@
 export default function Sights() {
 	return (
 		<div>
-			Hello from SIghts
+			Hello from Sights
 		</div>
 	);
 }

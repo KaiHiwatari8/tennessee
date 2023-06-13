@@ -1,0 +1,28 @@
+.border {
+    border: 1px solid red;
+}
+
+.logo_space {
+    width: 50%;
+    text-align: center;
+}
+
+.options_space {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.options {
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+    color: lightslategray;
+}
+
+.options:hover {
+    color: white;
+}
+
+.dropdown_wrapper {
+    border: 1px solid gray;
+}
