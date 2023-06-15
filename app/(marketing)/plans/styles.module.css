@@ -1,0 +1,10 @@
+.plan_tile {
+    width: 380px;
+    height: 90px;
+    transition: transform .2s ease-out;
+}
+
+.plan_tile:hover {
+    box-shadow: 0 0 10px 3px #334155;
+    transform: scale(1.02);
+}
