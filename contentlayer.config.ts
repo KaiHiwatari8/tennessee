@@ -41,7 +41,30 @@ export const Plan = defineDocumentType(() => ({
 	}
 }));
 
+export const Checklist = defineDocumentType(() => ({
+	name: "Checklist",
+	filePathPattern: "checklist/*list.mdx",
+	contentType: "mdx",
+	fields: {
+		title: {
+			type: "string",
+			required: true
+		},
+		description: {
+			type: "string"
+		},
+		image: {
+			type: "string",
+			required: true,
+		},
+		dateUpdated: {
+			type: "string",
+			required: true
+		},
+	}
+}));
+
 export default makeSource({
 	contentDirPath: "./content",
-	documentTypes: [Plan]
+	documentTypes: [Plan, Checklist]
 });

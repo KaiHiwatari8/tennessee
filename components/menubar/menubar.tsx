@@ -27,9 +27,6 @@ export default function MainNavigation() {
 					<Link href={"/photos"}>Photos</Link>
 				</span>
 				<span className={`py-3 ${styles.options}`}>
-					<Link href={"/blogs"}>Blogs</Link>
-				</span>
-				<span className={`py-3 ${styles.options}`}>
 					<Link href={"/about-me"}>About Me</Link>
 				</span>
 			</div>

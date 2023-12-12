@@ -9,7 +9,7 @@ export default function ChildLayout({ children }: { children: React.ReactNode })
 	return (
 		<div>
 			<MainNavigation />
-			<section>
+			<section className="pt-5 lg:px-40 px-4 text-justify">
 				{children}
 			</section>
 		</div>

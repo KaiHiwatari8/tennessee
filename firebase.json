@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "out",
+    "cleanUrls": true,
+    "site": "tennesseebykai",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

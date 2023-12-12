@@ -4,10 +4,10 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import {mergeClass} from "@tn/lib/utils";
 import {MDXComponents} from "mdx/types";
 import {MDXContentProps} from "mdx-bundler/client";
-import {LinkButton} from "@tn/components/link-button";
 
 interface MdxProps {
-	code: string
+	code: string,
+	className?: string
 }
 
 const components: MDXComponents = {
@@ -37,13 +37,12 @@ const components: MDXComponents = {
 	a: ({className, ...props}) => (
 		<a className={mergeClass("", className)} {...props} />
 	),
-	Image,
-	LinkButton
+	Image
 };
-export function Mdx({ code }: MdxProps) {
+export function Mdx({ code, className }: MdxProps) {
 	const Component: React.ComponentType<MDXContentProps> = useMDXComponent(code);
 	return (
-		<div className="mdx text-justify">
+		<div className={mergeClass(className, "mdx text-justify")}>
 			<Component components={components} />
 		</div>
 	);

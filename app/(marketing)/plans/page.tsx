@@ -1,4 +1,4 @@
-import {allPlans, Plan as PlanType} from "contentlayer/generated";
+import {allPlans} from "contentlayer/generated";
 import Link from "next/link";
 import styles from "./styles.module.css";
 

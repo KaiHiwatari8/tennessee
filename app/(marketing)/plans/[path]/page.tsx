@@ -33,7 +33,7 @@ export default async function Plan({params}: PlanPageProps) {
 	return (
 		<article className="plan_wrapper container lg:px-40 px-3 mx-auto py-5">
 			<header className="plan_title text-gray-100">
-				<p className="text-3xl lg:text-6xl font-semibold">Day {plan.day} - {plan.title}</p>
+				<p className="text-3xl lg:text-5xl font-semibold">Day {plan.day} - {plan.title}</p>
 				<p className="text-xs text-gray-400 pt-2">Date planned: {plan.datePlanned}</p>
 				<p className="text-xs text-gray-400">Date last updated: {plan.dateUpdated}</p>
 			</header>
